@@ -4,8 +4,9 @@ FROM maven:3.8.5-eclipse-temurin-17 AS build
 # Set the working directory
 WORKDIR /app
 
-# Copy the project files
-COPY . .
+# Copy the pom.xml and other project files
+COPY pom.xml .
+COPY src ./src
 
 # Build the application
 RUN mvn clean package
