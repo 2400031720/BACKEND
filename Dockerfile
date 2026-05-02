@@ -1,5 +1,5 @@
 # Use an official Maven image to build the application
-FROM maven:3.8.5-openjdk-17 AS build
+FROM maven:3.8.5-eclipse-temurin-17 AS build
 
 # Set the working directory
 WORKDIR /app
@@ -11,7 +11,7 @@ COPY . .
 RUN mvn clean package
 
 # Use an official Java runtime image to run the application
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk
 
 # Set the working directory
 WORKDIR /app
