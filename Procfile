@@ -1,0 +1,1 @@
+web: java -jar target/foodsave-backend-0.0.1-SNAPSHOT.jar
